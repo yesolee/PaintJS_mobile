@@ -1,0 +1,65 @@
+@import "reset.css";
+
+body {
+  background-color: #f6f9fc;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+canvas {
+  width: 800px;
+  height: 500px;
+  background-color: white;
+  border-radius: 5%;
+  margin-top: 40px;
+  box-shadow: 0 4px 6px rgba(50, 50, 93, 0.11), 0 1px 3px rgba(0, 0, 0, 0.08);
+  cursor: url(pen.png), pointer;
+}
+
+.tool {
+  margin-top: 20px;
+}
+
+.tool button {
+  width: 50px;
+  height: 30px;
+  text-transform: uppercase;
+  box-shadow: 0 4px 6px rgba(50, 50, 93, 0.11), 0 1px 3px rgba(0, 0, 0, 0.08);
+}
+
+.colors {
+  display: flex;
+  flex-direction: row;
+  cursor: pointer;
+  margin-top: 30px;
+}
+
+.colors .color {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  box-shadow: 0 4px 6px rgba(50, 50, 93, 0.11), 0 1px 3px rgba(0, 0, 0, 0.08);
+}
+
+.colors .eraser {
+  width: 50px;
+  height: 50px;
+}
+
+.colors .eraser i {
+  text-align: center;
+  font-size: 50px;
+  color: rgb(128, 125, 125);
+}
+
+.colors input {
+  cursor: pointer;
+  box-sizing: border-box;
+  background-color: transparent;
+  color: transparent;
+}
+
+.colors .palette {
+  text-align: center;
+  font-size: 45px;
+}
