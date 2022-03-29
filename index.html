@@ -11,6 +11,7 @@
 <body>
     <canvas class="canvas_screen"></canvas>
     <div class="controller">
+        <input type="range" id="jsRange">
     </div>
     <div class="tool">
         <button id="modeBtn">Fill</button>
@@ -25,7 +26,10 @@
         <div class="color" style="background-color: greenyellow;"></div>
         <div class="color" style="background-color: skyblue;"></div>
         <div class="color" style="background-color: blueviolet;"></div>
-        <span class="palette">🎨<input type="color"></span>
+        <div class="palette">
+            <span>🎨</span>
+            <input type="color" value = "#EDEDED";>
+        </div>
         <div class="eraser"><i class="fa-solid fa-eraser"></i></div>
 
     </div>   

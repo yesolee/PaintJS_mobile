@@ -2,33 +2,56 @@
 
 body {
   background-color: #f6f9fc;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
+    Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
   display: flex;
   flex-direction: column;
   align-items: center;
 }
-canvas {
-  width: 800px;
-  height: 500px;
+
+.canvas_screen {
+  margin: 40px;
+  width: 90%;
+  height: 120%;
   background-color: white;
   border-radius: 5%;
-  margin-top: 40px;
   box-shadow: 0 4px 6px rgba(50, 50, 93, 0.11), 0 1px 3px rgba(0, 0, 0, 0.08);
   cursor: url(pen.png), pointer;
+  max-width: 1000px;
+  max-height: 1000px;
+}
+
+.controller {
+  margin-top: 40px;
 }
 
 .tool {
-  margin-top: 20px;
+  margin-top: 30px;
 }
 
 .tool button {
-  width: 50px;
+  all: unset;
+  font-size: 20px;
+  font-weight: 800;
+  width: 80px;
   height: 30px;
   text-transform: uppercase;
+  border-radius: 10px;
+  border: 2px solid rgba(0, 0, 0, 0.2);
   box-shadow: 0 4px 6px rgba(50, 50, 93, 0.11), 0 1px 3px rgba(0, 0, 0, 0.08);
+  margin-top: 20px;
+  margin-right: 10px;
+  text-align: center;
+  background-color: rgb(224, 190, 255);
+}
+
+.tool button:active {
+  transform: scale(0.95);
 }
 
 .colors {
   display: flex;
+  width: max-content;
   flex-direction: row;
   cursor: pointer;
   margin-top: 30px;
@@ -44,6 +67,7 @@ canvas {
 .colors .eraser {
   width: 50px;
   height: 50px;
+  margin-left: 3px;
 }
 
 .colors .eraser i {
@@ -52,14 +76,24 @@ canvas {
   color: rgb(128, 125, 125);
 }
 
-.colors input {
-  cursor: pointer;
-  box-sizing: border-box;
-  background-color: transparent;
-  color: transparent;
-}
-
 .colors .palette {
   text-align: center;
   font-size: 45px;
+  border-radius: 50%;
+  display: flex;
+  width: 110px;
+  border-radius: 50%;
+}
+
+.colors .palette input {
+  all: unset;
+  border: none;
+  background-color: none;
+  width: 50px;
+  box-shadow: 0 4px 6px rgba(50, 50, 93, 0.11), 0 1px 3px rgba(0, 0, 0, 0.08);
+}
+
+@media screen and (min-width: 768px) {
+  .canvas {
+  }
 }
